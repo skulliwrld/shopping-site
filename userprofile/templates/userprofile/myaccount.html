@@ -1,0 +1,10 @@
+{% extends 'coreapp/base.html' %}
+
+{% block title%}my account {% endblock %}
+
+
+{% block body %}
+<h1 class="text-2xl">My Account </h1>
+
+<a href="{% url 'logout' %}" class="inline-block m-4 text-white py-4 px-8 bg-red-500">Logout</a>
+{% endblock %}

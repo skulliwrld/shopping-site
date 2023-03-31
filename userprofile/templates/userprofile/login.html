@@ -1,0 +1,15 @@
+{% extends 'coreapp/base.html' %}
+
+{% block title%}Login{% endblock %}
+
+
+{% block body %}
+<h2>Login</h2>
+
+<form method = 'post' action=".">
+    {% csrf_token %}
+        {{form.as_p}}
+    <button class="m-2 p-4 p-2 text-sm text-black-500 bg-green-300">Sign Up</button>
+</form>
+
+{% endblock %}

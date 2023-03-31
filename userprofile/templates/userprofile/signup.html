@@ -1,0 +1,15 @@
+{% extends 'coreapp/base.html' %}
+
+{% block title%}{{product.title}}{% endblock %}
+
+
+{% block body %}
+<h2>Sign Up</h2>
+
+<form method = 'post' action=".">
+    {% csrf_token %}
+        {{form.as_p}}
+    <button class="m-2 py-4 px-8  text-white bg-teal-800">Sign Up</button>
+</form>
+
+{% endblock %}

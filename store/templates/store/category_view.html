@@ -1,0 +1,9 @@
+{% extends 'coreapp/base.html' %}
+
+{% block title%}{{categoryy.title}}{% endblock %}
+
+
+{% block body %}
+   <h1 class="text-2xl"> {{categoryy.title}}</h1>
+    {% include 'partial.html' %}
+{% endblock %}

@@ -1,0 +1,46 @@
+1.DONE--install django into our project folder
+2 DONE---- create our django project
+3 DONE---- create our App
+4 DONE--- Render a simple introduction about what we want to build 
+5 DONE--- Init database, super user, test run
+6DONE--- create core app for base page(shopping app)
+7DONE--- create app for userprofiles
+8DONE--- create app for (product)STORE
+   DONE -Add category models and product models
+9DONE---List out newest products on the front page
+10DONE--- Product details views
+11DONE---category views
+DONE--show vendor on product details
+DONE--Add images to the product
+DONE---Vendor details page(user page)
+DONE---make it possible to sign up,login ,logout
+DONE---create my account page
+DONE---Simple search
+DONE--- Admin page for the Vendor(enable vendor to add their products in our site and then give it some styling)
+DONE---Add products to cart
+DONE---View Cart
+DONE--- make it possible to remove items from a cart
+DONE--- make it possible to increase and decrease quantity
+DONE---add thumbnails to the products
+
+
+# NEW CODE WORK
+ Done-fix the design of our cart page
+ Done-checkout page
+ Done-separate shopper from vendors
+ Done-checkout functionality
+ Done- Add cart button in menu
+ Done-vendor must be able to see their requested orders
+ Done-Only authenticated user can proceed to checkout page
+ Done-implement payment gateway
+    Done-Get API key from stripe
+    Done-Install Stripe and add credentials in settings
+    Done-Pass the pub key into the checkout views
+    Done-create stripe checkout when creating orders
+    Done-create success page
+ Done-Add validations to the checkout forms
+ Done-Add settings file for production
+ Done-Add requirement fields
+ Done-Meta Tags For sub_pages
+ Done-Add robot files
+ deploy project

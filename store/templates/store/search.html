@@ -1,0 +1,15 @@
+{% extends 'coreapp/base.html' %}
+
+{% block title%}search{% endblock %}
+
+
+{% block body %}
+   <h1 class="text-2xl"> Search Result : {{query}}</h1>
+{% if products %}
+
+    {% include 'partial.html' %}
+    
+{% else %}
+<h4>'{{query}}' is not found in our database</h4>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'coreapp/base.html' %}
+
+{% block title%}{{product.title}}{% endblock %}
+
+{% block meta %}
+<meta name="description" content="{{product.description}} ">
+<meta name="author" content="Skulliwrld">
+<meta property="og:title" content="Skulliwrld | {{product.title}}">
+<meta property="og:description" content="{{product.description}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://skulliwrld.com{% url 'product_view' product.category.slug product.slug %}">
+{% if product.image%}
+<meta property="og:image" content="http://skulliwrld.com{{product.image.url}}">
+{% endif %}
+{% endblock %}
+
+
+{% block body %}
+{% if product.image%}
+    <div class="image mb-4">
+        <img src="{{product.image.url}}" alt="image of {{product.title}}">
+    </div>
+    {% endif %}
+   <h1 class="text-2xl">{{product.title}}</h1>
+   <p class="text-xs text-gray-500">
+        #{{ product.get_display_price}}
+        -
+       <a href="{% url 'vendor_detail' product.user.id %}">{% firstof product.user.get_full_name product.user.username %}</a>
+
+   </p> 
+    {% if product.description %}
+        <p class="mt-4">
+            {{product.description}} 
+        </p>
+
+   {% endif %}
+
+   <a href="{% url 'add_to_cart' product.id %}" class=" mt-2 inline-block py-4 px-8 bg-teal-500 text white">Add To Cart</a>
+{% endblock %}
